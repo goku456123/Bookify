@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up - Bookify</title>
+    <link rel="icon" type="image/x-icon" href="bookify.jpg">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background-color: #f4f4f4;
+        }
+        .signup-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            position: relative;
+            max-width: 400px;
+            margin: 100px auto;
+        }
+        .signup-container h2 {
+            margin-bottom: 20px;
+        }
+        .signup-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .signup-container input[type="email"],
+        .signup-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .signup-container input[type="submit"] {
+            background-color: #04AA6D;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .signup-container input[type="submit"]:hover {
+            background-color: #038c5c;
+        }
+        .floating-books {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .floating-books img {
+            position: absolute;
+            width: 50px;
+            height: auto;
+            opacity: 0.6;
+            animation: float 10s linear infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert("Oops! The creator is working on updating this website. STAY TUNED ;)");
+        }
+    </script>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form onsubmit="handleSubmit(event)">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+    <div class="floating-books">
+        <img src="book1.png" style="left: 10%; animation-duration: 8s;">
+        <img src="book2.png" style="left: 30%; animation-duration: 12s;">
+        <img src="book3.png" style="left: 50%; animation-duration: 10s;">
+        <img src="book1.png" style="left: 70%; animation-duration: 14s;">
+        <img src="book2.png" style="left: 90%; animation-duration: 16s;">
+    </div>
+</body>
+</html>
+
+
